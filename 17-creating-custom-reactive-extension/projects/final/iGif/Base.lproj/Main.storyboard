@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AMf-ht-fF1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="byi-2j-SnX">
+            <objects>
+                <navigationController id="AMf-ht-fF1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dnr-8O-tyx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Cpv-Rc-h8e" kind="relationship" relationship="rootViewController" id="1Na-ll-1Ld"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ju7-ef-l4f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47" y="640"/>
+        </scene>
+        <!--Main Table View Controller-->
+        <scene sceneID="W1b-mz-vWp">
+            <objects>
+                <tableViewController id="Cpv-Rc-h8e" customClass="MainTableViewController" customModule="iGif" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" id="c3B-AA-aIh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GifCell" rowHeight="200" id="4o2-vg-IN0" customClass="GifTableViewCell" customModule="iGif" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4o2-vg-IN0" id="SLy-i9-JJR">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZIg-1a-enh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                        </imageView>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="BFh-H5-bSq">
+                                            <rect key="frame" x="177" y="89" width="20" height="20"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="BFh-H5-bSq" firstAttribute="centerY" secondItem="SLy-i9-JJR" secondAttribute="centerY" id="GDD-P6-q4J"/>
+                                        <constraint firstItem="BFh-H5-bSq" firstAttribute="centerX" secondItem="SLy-i9-JJR" secondAttribute="centerX" id="Gfq-92-cQX"/>
+                                        <constraint firstAttribute="trailing" secondItem="ZIg-1a-enh" secondAttribute="trailing" id="Hi5-9S-Y47"/>
+                                        <constraint firstItem="ZIg-1a-enh" firstAttribute="leading" secondItem="SLy-i9-JJR" secondAttribute="leading" id="fvA-wk-xjz"/>
+                                        <constraint firstItem="ZIg-1a-enh" firstAttribute="top" secondItem="SLy-i9-JJR" secondAttribute="top" id="j7O-0Z-zOO"/>
+                                        <constraint firstAttribute="bottom" secondItem="ZIg-1a-enh" secondAttribute="bottom" id="jgv-fR-nih"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="activityIndicator" destination="BFh-H5-bSq" id="0Ra-vV-9wK"/>
+                                    <outlet property="gifImageView" destination="ZIg-1a-enh" id="ske-nk-EVY"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Cpv-Rc-h8e" id="eCH-yo-9NL"/>
+                            <outlet property="delegate" destination="Cpv-Rc-h8e" id="AjQ-cl-zqi"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="2sM-Wu-zGN"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rrh-e2-5PB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="820" y="638.2308845577212"/>
+        </scene>
+    </scenes>
+</document>

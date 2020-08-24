@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="InfoView" customModule="Wundercast" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="321" height="53"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="InfoView" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="QfS-9E-5Nj">
+                    <rect key="frame" x="12" y="18" width="55.5" height="17"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMr-ox-a1O">
+                    <rect key="frame" x="277" y="0.0" width="44" height="53"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="867-mV-C5J"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="bcb-JH-gka"/>
+                    </constraints>
+                    <state key="normal" image="closeSmall"/>
+                    <connections>
+                        <action selector="closePressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="kna-px-SQU"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.85490196080000003" green="0.0" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="QfS-9E-5Nj" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="top" constant="9" id="CZr-ua-DAd"/>
+                <constraint firstItem="dMr-ox-a1O" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QfS-9E-5Nj" secondAttribute="trailing" constant="4" id="DuL-ct-ttQ"/>
+                <constraint firstItem="QfS-9E-5Nj" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="HBI-q7-nss"/>
+                <constraint firstAttribute="trailing" secondItem="dMr-ox-a1O" secondAttribute="trailing" id="URI-SX-2ae"/>
+                <constraint firstAttribute="bottom" secondItem="dMr-ox-a1O" secondAttribute="bottom" id="YTV-oL-hzy"/>
+                <constraint firstItem="dMr-ox-a1O" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lff-tB-zcy"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="QfS-9E-5Nj" secondAttribute="bottom" constant="9" id="sQc-vw-Op8"/>
+                <constraint firstItem="QfS-9E-5Nj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="v9y-F2-amK"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="closeButton" destination="dMr-ox-a1O" id="ash-vK-7Wr"/>
+                <outlet property="textLabel" destination="QfS-9E-5Nj" id="sPN-1j-Tbo"/>
+            </connections>
+            <point key="canvasLocation" x="-1.5" y="-254.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="closeSmall" width="12" height="12"/>
+    </resources>
+</document>
