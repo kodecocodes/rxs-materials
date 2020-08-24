@@ -9,4 +9,5 @@ Each edition has its own branch, named `editions/[EDITION]`. The default branch 
 | Branch                                                                           | Edition | Release Date |
 | -------------------------------------------------------------------------------- |:-------:|:------------:|
 | [editions/4.0](https://github.com/raywenderlich/rxs-materials/tree/editions/4.0) | 4.0     | 2020-08-11   |
+| [editions/5.0](https://github.com/raywenderlich/rxs-materials/tree/editions/5.0) | 5.0     | YYYY-MM-DD   |
 
