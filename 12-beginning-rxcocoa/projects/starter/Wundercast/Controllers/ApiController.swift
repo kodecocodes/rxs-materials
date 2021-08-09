@@ -106,11 +106,15 @@ class ApiController {
 
   // MARK: - Api Calls
   func currentWeather(for city: String) -> Observable<Weather> {
-    buildRequest(pathComponent: "weather", params: [("q", city)])
-      .map { data in
-        try JSONDecoder().decode(Weather.self, from: data)
-      }
-  }
+  // Placeholder call
+  return Observable.just(
+    Weather(
+      cityName: city,
+      temperature: 20,
+      humidity: 90,
+      icon: iconNameToChar(icon: "01d"))
+  )
+}
 
   // MARK: - Private Methods
 
