@@ -2,23 +2,22 @@ import Foundation
 import RxSwift
 
 example(of: "never") {
-  let observable = Observable<Any>.never()
-  let disposeBag = DisposeBag()
-  
-  observable
-    .do(onSubscribe: {
-      print("Subscribed")
-    })
-    .subscribe(
-      onNext: { element in
-        print(element)
-      },
-      onCompleted: {
-        print("Completed")
-      },
-      onDisposed: {
-        print("Disposed")
-      }
+    let observable = Observable.of(1, 2, 3)
+    let disposeBag = DisposeBag()
+    
+    observable.debug("never debug info").subscribe(
+        onNext: { element in
+            print(element)
+        },
+        onError: { error in
+            print(error)
+        },
+        onCompleted: {
+            print("Completed")
+        },
+        onDisposed: {
+            print("Disposed")
+        }
     )
     .disposed(by: disposeBag)
 }
