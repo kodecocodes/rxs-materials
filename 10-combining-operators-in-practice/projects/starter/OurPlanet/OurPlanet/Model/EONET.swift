@@ -35,7 +35,7 @@ import RxSwift
 import RxCocoa
 
 class EONET {
-  static let API = "https://eonet.sci.gsfc.nasa.gov/api/v2.1"
+  static let API = "https://eonet.gsfc.nasa.gov/api/v2.1"
   static let categoriesEndpoint = "/categories"
   static let eventsEndpoint = "/events"
 
